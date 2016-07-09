@@ -39,7 +39,13 @@ en:
       login: "Log in"
       signup: "signup"
       logout: "Log out"
+      editprofile: "Edit profile"
+      profile: "Profile"
     footer:
       about: "About"
       help: "Help"
       contact: "Contact"
+  user:
+    edit: "Profile updated"
+  shared:
+    contain_error: "the form contains "
