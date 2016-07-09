@@ -47,5 +47,10 @@ en:
       contact: "Contact"
   user:
     edit: "Profile updated"
+    name: "Name"
+    email: "Email"
+    phone: "Phone_number"
+    address: "Address"
+    avatar: "Avatar"
   shared:
     contain_error: "the form contains "
