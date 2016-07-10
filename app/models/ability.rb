@@ -5,9 +5,12 @@ class Ability
     user ||= User.new
     if user.admin?
       can :manage, :all
-    else
+
+    elsif user.member?
       can :read, :all
-      can [:edit, :update], User
+      can [:show, :edit, :update], User
+    else
+      can :read, Product
     end
   end
 end
