@@ -7,7 +7,6 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '7d960dc6d9dacd66baa4db34a5130b4214208d2773dc31ff887b78a880073d7d46c05e0ddf62cd43395cc82362ed6fe88069a0b0aeacc28c6e1a7e4ee7386480'
-
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
@@ -26,6 +25,12 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/active_record'
 
+  config.omniauth :facebook, "139525173139042", "cdd22f377eb257df062a9cdc5a5db1b2"
+  config.omniauth :twitter, "x9llHscvFqyq1NpXOK6pYFfN5",
+    "VSxRX5zUcQF64qIYNSUCs1uCBsl21Gk9NI1HZijs7Ik7b1k67y"
+  config.omniauth :google_oauth2,
+    "64419650331-n0qgn15c8s63v7e8vgh0r7uusk3h2goh.apps.googleusercontent.com",
+    "y2XTtnen9BEqv8dHeDAZdp16"
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for

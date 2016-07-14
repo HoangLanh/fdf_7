@@ -55,6 +55,9 @@ en:
       signupnow: "Sign up"
   layout:
     header:
+      facebook: "Sign in with Facebook"
+      twitter: "Sign in with Twitter"
+      google: "Sign in with Google"
       login: "Log in"
       signup: "signup"
       logout: "Log out"

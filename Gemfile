@@ -29,7 +29,6 @@ gem "devise"
 gem "cancancan"
 gem "carrierwave"
 gem "ransack"
-
 gem "mini_magick"
 # bootstrap
 gem "bootstrap-sass",       "3.2.0.0"
@@ -37,6 +36,9 @@ gem "config"
 # Working with user password
 gem "bcrypt"
 gem "faker"
+gem "omniauth-facebook"
+gem "omniauth-twitter"
+gem "omniauth-google-oauth2"
 # Use ActiveModel has_secure_passworda
 # gem "bcrypt", "~> 3.1.7"
 
@@ -45,7 +47,6 @@ gem "faker"
 
 # Use Capistrano for deployment
 # gem "capistrano-rails", group: :development
-
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
   gem "byebug"

@@ -39,8 +39,12 @@
         <% else %>
           <li><%= link_to t("layout.header.login"), new_user_session_path %></li>
           <li><%= link_to t("static_pages.home.signupnow"),
-            new_user_registration_path %>
+            new_user_registration_path %></li>
+          <li><%= link_to t("layout.header.facebook"), user_facebook_omniauth_authorize_path %></li>
+          <li><%= link_to t("layout.header.twitter"), user_twitter_omniauth_authorize_path %></li>
+          <li><%= link_to t("layout.header.google"), user_google_oauth2_omniauth_authorize_path %>
           </li>
+          </li>     
         <% end %>
         <span class="icon-search-header-top">
           <%= link_to image_tag("cart.png"), "/cart" %>
