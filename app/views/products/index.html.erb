@@ -1,5 +1,6 @@
 <div class="panel">
   <center><h1><%= t "views.products.index.h1" %></h1></center>
+  <div class="row">
   <%= search_form_for @search do |f|%>
   <span>
     <strong><%= t "views.admin.product.form.category" %>:</strong><br>
@@ -20,14 +21,16 @@
       <%= f.label :price_lteq, t("products.and") %>
       <%= f.text_field :price_lteq %>
     </div>
-    <%= f.sort_fields do |s| %>
-      <%= s.sort_select %>
-    <% end %>
+    <div class="row field">
+      <%= f.sort_fields do |s| %>
+        <div class="col-md-3">
+          <%= s.sort_select %>
+        </div>
+      <% end %>
+    </div>
     <div class = "actions"><%= f.submit t ("products.search")%></div>
   <% end %>
-
 </div>
-<div class="row">
   <% if @products.any? %>
     <% @products.each do |product| %>
       <div class="col-4 item" >
