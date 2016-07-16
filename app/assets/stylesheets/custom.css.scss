@@ -4,6 +4,14 @@
 
 $size: 24px;
 
+.searchform {
+float: left;
+margin-top: 20px;
+border:#00afdd 2px solid;
+height:27px;
+width:350px;
+}
+
 .social-share-button {
   .ssb-icon {
     background-size: $size $size;
@@ -152,4 +160,13 @@ hr {
 .fa-size {
   font-size: 30px;
   color:red;
+}
+
+.panel{
+  float:left;
+  width:100%;
+}
+.field{
+  margin-top: 10px;
+  margin-left: 10px;
 }

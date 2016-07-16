@@ -39,6 +39,31 @@
       <td><h4><%= sort_link @search, :price %></h4></td>
     </tr>
   </table>
+  <div class="field">
+    <strong><%= t "views.admin.product.form.category" %>:</strong>
+   <%= f.grouped_collection_select :category_id_eq,
+      Category.parent_category.order(:title), :children, :title, :id, :title, class: "form-control" %>
+  </div>
+  <div class="field">
+      <%= f.label :name, t("products.name") %>
+      <span class="field"><%= f.text_field :name_cont %></span> 
+  </div>
+  <div class="field">
+      <%= f.label :rate_score, t("products.rate") %>
+      <span class="field"><%= f.text_field :rate_score %></span>
+  </div>
+  <div class="field">
+      <%= f.label :price_gteq, t("products.pricebet") %>
+     <span class="field"><%= f.text_field :price_gteq %></span>
+      <%= f.label :price_lteq, t("products.and") %>
+     <span class="field"> <%= f.text_field :price_lteq %></span>
+  </div>
+    <%= f.sort_fields do |s| %>
+      <%= s.sort_select %>
+    <% end %>
+    <div class = "actions"><%= f.submit t ("products.search")%></div>
+  <% end %>
+>>>>>>> task30
 </div>
 <div class="row">
   <% if @products.any? %>
