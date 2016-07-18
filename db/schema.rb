@@ -29,8 +29,6 @@ ActiveRecord::Schema.define(version: 20160707063441) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "comments", ["user_id", "product_id"], name: "index_comments_on_user_id_and_product_id", unique: true
-
   create_table "line_items", force: :cascade do |t|
     t.integer  "order_id"
     t.integer  "product_id"
@@ -80,6 +78,7 @@ ActiveRecord::Schema.define(version: 20160707063441) do
     t.text     "address"
     t.string   "provider"
     t.string   "uid"
+    t.string   "chatwork_id"
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
