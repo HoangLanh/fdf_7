@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  title: "Food and drinks"
   cart:
     nullproduct: "This product is now null in the store"
     nomoreproduct: "There are no more product in the store!"
