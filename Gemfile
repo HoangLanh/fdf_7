@@ -39,8 +39,8 @@ gem "omniauth"
 gem "omniauth-facebook"
 gem "omniauth-google-oauth2"
 gem "figaro"
-
 gem "sidekiq"
+gem "chatwork"
 # Use ActiveModel has_secure_passworda
 # gem "bcrypt", "~> 3.1.7"
 
@@ -58,7 +58,6 @@ group :development, :test do
 end
 
 group :production do
-  gem "pg", "0.17.1"
   gem "rails_12factor", "0.0.2"
   gem "puma", "3.1.0"
 end

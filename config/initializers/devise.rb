@@ -17,6 +17,7 @@ Devise.setup do |config|
   require "omniauth-google-oauth2"
   config.omniauth :google_oauth2,
     ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"]
+  ChatWork.api_key = ENV["CHATWORK_KEY"]
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'

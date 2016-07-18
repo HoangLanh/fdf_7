@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 20160707063441) do
     t.text     "address"
     t.string   "provider"
     t.string   "uid"
+    t.string   "chatwork_id"
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"

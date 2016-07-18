@@ -29,6 +29,12 @@
           class: "form-control" %>
       </div>
 
+      <div class="field">
+        <%= f.label :chatwork_id %><br />
+        <%= f.text_field :chatwork_id, autocomplete: "off",
+          class: "form-control" %>
+      </div>
+
       <center>
         <%= f.submit t("layout.header.signup"),
         class: "btn btn-success btn-lg btn-signup" %>
