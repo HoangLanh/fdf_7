@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  title: "food and drinks"
   cart:
     nullproduct: "This product is now null in the store"
     nomoreproduct: "There are no more product in the store!"
@@ -46,6 +47,7 @@ en:
     new:
       shipaddress: "Send us your address for shipping: "
   products:
+    noproduct: "There are no result for your search"
     total_price: "Total Price"
     empty: "Empty your cart"
     addtocart: "add to cart"
