@@ -15,10 +15,12 @@
         <%= f.label :content %>:
         <%= f.text_area :content, class: "form-control" %>
       </span>
+      <br/>
       <span>
         <strong><%= t "views.suggests.new.picturesuggest" %></strong>
         <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png" %>
       </span>
+      <br/>
       <%= f.submit t("views.suggests.new.createbutton"), class: "btn btn-primary" %>
     <% end %>
   </div>

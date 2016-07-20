@@ -11,11 +11,15 @@
     </span>
     <div>
       <% if can? :update_destroy, Comment %>
-        <%= link_to t("views.comments.edit"),
-          edit_product_comment_path(comment.product, comment), remote: true %>
-        <%= link_to t("views.comments.delete"),
-          product_comment_path(comment.product, comment),
-          method: :delete, remote: true %>
+        <% if user_signed_in? %>
+          <%if comment.user_id == current_user.id %>
+            <%= link_to t("views.comments.edit"),
+              edit_product_comment_path(comment.product, comment), remote: true %>
+            <%= link_to t("views.comments.delete"),
+              product_comment_path(comment.product, comment),
+              method: :delete %>
+          <% end %>
+        <% end %>
       <% end %>
     </div>
     <div id="edit-<%=comment.id%>-comment">

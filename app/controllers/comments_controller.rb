@@ -8,38 +8,31 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @product.comments.build comment_params
-    respond_to do |format|
-      if @comment.save
-        flash[:success] = t "controllers.flash.common.create_success",
-          objects: t("activerecord.model.comment")
-      else
-        flash[:danger] = t "controllers.flash.common.create_error",
-          objects: t("activerecord.model.comment")
-      end
-      format.html {redirect_to @product_path}
-      format.js
+    if @comment.save
+      flash[:success] = t "controllers.flash.common.create_success",
+        objects: t("activerecord.model.comment")
+    else
+      flash[:danger] = t "controllers.flash.common.create_error",
+        objects: t("activerecord.model.comment")
     end
+    redirect_to product_path(@product)
   end
 
   def edit
   end
 
   def update
-    respond_to do |format|
-      if @comment.update_attributes comment_params
-        flash[:success] = t "controllers.flash.common.update_success",
-          objects: t("activerecord.model.comment")
-      else
-        flash[:danger] = t "controllers.flash.common.update_error",
-          objects: t("activerecord.model.comment")
-      end
-      format.html {redirect_to @product_path}
-      format.js
+    if @comment.update_attributes comment_params
+      flash[:success] = t "controllers.flash.common.update_success",
+        objects: t("activerecord.model.comment")
+    else
+      flash[:danger] = t "controllers.flash.common.update_error",
+        objects: t("activerecord.model.comment")
     end
+    redirect_to product_path(@product)
   end
 
   def destroy
-    respond_to do |format|
       if @comment.destroy
         flash[:success] = t "controllers.flash.common.destroy_success",
           objects: t("activerecord.model.comment")
@@ -47,9 +40,7 @@ class CommentsController < ApplicationController
         flash[:danger] = t "controllers.flash.common.destroy_error",
           objects: t("activerecord.model.comment")
       end
-      format.html {redirect_to @product_path}
-      format.js
-    end
+      redirect_to product_path(@product)
   end
 
   private

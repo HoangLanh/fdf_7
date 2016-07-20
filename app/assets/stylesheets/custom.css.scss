@@ -171,3 +171,13 @@ hr {
 .panel{
   float: right;
 }
+
+.scroll {
+  height:100px;
+  width: 100%;
+  overflow: auto;
+  color: black;
+  font-family: sans-serif;
+  padding:10px;
+  font-size: 15px;
+}
